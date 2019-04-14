@@ -1,0 +1,77 @@
+<ion-header>
+    <ion-navbar color="brand2">
+      <ion-title style="text-align: center;color: white">Profile</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list no-line>
+  
+      <ion-item>
+        <ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-5 class="text-left" size="4"> First Name:</ion-col>
+              <ion-col class="text-center" size="7" *ngIf="userProfile?.firstName" (click)="updateFirstName()">
+                {{userProfile?.firstName}}
+              </ion-col>
+              <ion-col class="text-right" size="1">
+                <!-- <span> Edit </span> -->
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-5 class="text-left" size="4"> Last Name:</ion-col>
+              <ion-col class="text-center" size="7" *ngIf="userProfile?.lastName" (click)="updateLastName()">
+                {{userProfile?.lastName}}
+              </ion-col>
+              <ion-col class="text-right" size="1">
+                <!-- <span> Edit </span> -->
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-label>
+      </ion-item>
+  
+  
+      <ion-item>
+        <ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-5 class="text-left" size="4"> Email:</ion-col>
+              <ion-col class="text-center" size="7" *ngIf="userProfile?.email" (click)="updateEmail()">
+                {{userProfile?.email}}
+              </ion-col>
+              <ion-col class="text-right" size="1">
+                <!-- <span> Edit </span> -->
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-5 class="text-left" size="4"> Password: </ion-col>
+              <ion-col class="text-center" size="7" *ngIf="userProfile?.email" (click)="updatePassword()">
+                ******
+              </ion-col>
+              <ion-col class="text-right" size="1">
+                <!-- <span> Edit </span> -->
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-label>
+      </ion-item>
+  
+    </ion-list>
+  </ion-content>
+  

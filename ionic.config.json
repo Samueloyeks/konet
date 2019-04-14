@@ -1,0 +1,7 @@
+{
+  "name": "Konet",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

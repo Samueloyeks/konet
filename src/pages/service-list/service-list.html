@@ -1,0 +1,28 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="text-align: center;color: white">Service List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let item of temparr; let i=index"  text-wrap 
+      [ngClass]="{active: isGroupShown(i)}">
+      <ion-avatar item-left class="avatar"><img src={{item.logo}}></ion-avatar>
+      <h3>
+        {{item.name}}
+        <ion-icon color="success" item-right [name]="isGroupShown(i) ?
+          'arrow-dropdown' : 'arrow-dropright'" (click)="toggleGroup(i)"></ion-icon>
+      </h3>
+      <ion-icon name="mail" class="contact" item-end></ion-icon>
+      <ion-icon name="call" class="contact" item-end (click)="call(item.phone)"></ion-icon>
+      <div *ngIf="isGroupShown(i)" >{{item.about}}</div>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
